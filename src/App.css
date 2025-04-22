@@ -1,0 +1,227 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  border: 1px solid;
+}
+
+/* menubar */
+.menu{
+  width: 90%;
+  background: gray;
+  position: relative;
+  left: -90%;
+  transition: all .5s;
+}
+.activemenu{
+  left: 0%;
+}
+button.micon {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  /* top: 20px; */
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding: 15px;
+}
+.menu li{
+  border-bottom: 1px solid;
+  padding: 10px;
+}
+
+
+/* modal */
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: none;
+}
+.showOverlay{
+  display: block;
+}
+.modalDiv{
+  width: 320px;
+  height: 320px;
+  left: 50%;
+  transition: 0.3s;
+  background: white;
+  position: fixed;
+  border: 1px solid red;
+  transform: translate(-50%, -50%);
+  top: -50%;
+}
+.showModal{
+  top: 50%;
+}
+button.enq {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  transform: rotate(-90deg);
+}
+
+
+/* faq */
+.faq-wraper {
+  background: ghostwhite;
+  /* padding: 10px 20px; */
+  border: 1px solid;
+  margin-bottom: 20px;
+  transition: all .5s;
+}
+.answer {
+  display: none;
+}
+.answerShow{
+  display: block;
+  padding: 10px 20px;
+  transition: all .5s;
+}
+.question {
+  cursor: pointer;
+    transition: all .5s;
+    background: black;
+    color: white;
+    padding: 11px;
+}
+
+
+
+/* from here to do list */
+.todoBlock input{
+  width: 70%;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 10px;
+}
+.todoBlock form{
+  display: flex;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.todoBlock button{
+  width: 50px;
+  height: 40px;
+  /* border-radius: 2px; */
+  cursor: pointer;
+
+}
+
+.outerDiv {
+  display: flex;
+  /* background: black; */
+  /* color: white; */
+  padding: 20px;
+  width: 75%;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+.outerDiv ul{
+  margin: 0;
+  padding: 0;
+  /* background: red; */
+  width: 100%;
+  /* background: black; */
+  padding: 10px;
+  /* color: white; */
+  text-align: left;
+  position: relative;
+}
+.outerDiv ul li{
+  list-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    padding: 10px;
+    border: 1px solid gray;
+    /* color: #000; */
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.outerDiv ul li span{
+  position: absolute;
+  right: 12px;
+}
+.completedItem{
+  text-decoration: line-through;
+  color: red !important;
+  background: yellow !important;
+}
+
+
+
+
+/* tablist */
+.TabList{
+
+}
+.TabList ul{
+  text-align: left;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.TabList ul li button{
+cursor: pointer;
+}
+.activeTab{
+  border: 1px solid red !important;
+}
